@@ -1,4 +1,11 @@
 import {
+  createCanvas,
+  createEngine,
+  createGround,
+  createScene,
+  createSky,
+} from "@/entities/scene/";
+import {
   ArcRotateCamera,
   Color3,
   CubeTexture,
@@ -10,13 +17,8 @@ import {
   Texture,
   Vector3,
 } from "@babylonjs/core";
-import { createEngine } from "@/entities/player/model/scene/model/lib/createEngine";
-import { createCanvas } from "@/entities/player/model/scene/model/lib/createCanvas";
-import { createScene } from "@/entities/player/model/scene/model/lib/createScene";
 import { DebugLayer } from "@babylonjs/core";
 import "@babylonjs/inspector";
-import { createSky } from "@/entities/player/model/scene/model/lib/createSky";
-import { createGround } from "@/entities/player/model/scene/model/lib/createGround";
 
 export const initBabylon = async (container: HTMLDivElement) => {
   const canvas = createCanvas(container);
